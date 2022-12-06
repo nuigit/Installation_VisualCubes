@@ -2,8 +2,9 @@
 
 This project is about visualizing audio and userinputs as part of a "creative" installation. A sensor tracks the groundvibrations and this value is used to scale the shown grid. You can change modus of the cube with the keypad, also the colorthemes. The audio will be analysed with the minim library in processing. This works with a virtual audio cable (desktop sound f.e.) but for more "userinputs" you can use a normal microphone with is placed near the music so the user sounds also get analysed. 
 
+![VideoCubeInstallationGif2](https://user-images.githubusercontent.com/118546239/205940936-59874347-07e8-44ab-b682-81462e7821ce.gif)
 
-![changeMode5(CubesScaleFFT_PosZ=Random(0,600))](https://user-images.githubusercontent.com/118546239/205932519-4e071ee0-3afe-4ca3-bb50-edf20246fd2b.PNG)
+![VideoCubeInstallationGif3](https://user-images.githubusercontent.com/118546239/205941172-2cadf722-b8ae-434f-8d25-f53f0ffa98b7.gif)
 
 
 <h2>Introduction</h2>
