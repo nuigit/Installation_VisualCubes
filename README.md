@@ -1,6 +1,6 @@
 <h1>Interactive Audiovisualizer</h1>
 
-This project is about visualizing audio and userinputs as part of a "creative" installation. A sensor tracks the groundvibrations and this value is used to scale the shown grid. You can change modus of the cube with the keypad, also the colorthemes. The audio will be analysed with the minim library in processing. This works with a virtual audio cable (desktop sound f.e.) but for more "userinputs" you can use a normal microphone with is placed near the music so the user sounds also get analysed. 
+This project is about visualizing audio and userinputs as part of a "creative" installation. A sensor tracks the groundvibrations and this value is used to scale the shown grid. You can change modus of the cube with the keypad, also the colorthemes. The audio will be analysed with the minim library in processing. This works with a virtual audio cable (desktop sound f.e.) for more "userinputs" you can use a normal microphone with is placed near the music so the user sounds also get analysed. 
 
 ![VideoCubeInstallationGif2](https://user-images.githubusercontent.com/118546239/205940936-59874347-07e8-44ab-b682-81462e7821ce.gif)
 
