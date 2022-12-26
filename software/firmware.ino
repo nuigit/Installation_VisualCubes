@@ -2,6 +2,7 @@
 #include <MPU6050.h>  // Accelerometer
 #include <Keypad.h>   // KeyPad
 #include <Encoder.h>  // Encoder
+#include <elapsedMillis.h> //Timer
 
 MPU6050 mpu;
 int accelValue = 4;
@@ -14,13 +15,17 @@ char hexaKeys[ROWS][COLS] = {
   {'7', '8', '9', 'c'},
   {'*', '0', '#', 'd'}
 };
-byte rowPins[ROWS] = {9, 8, 7, 6}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {5, 4, 3, 2}; //connect to the column pinouts of the keypad
+//byte rowPins[ROWS] = {9, 8, 7, 6}; //connect to the row pinouts of the keypad teensy
+byte rowPins[ROWS] = {13,12,14,27}; //connect to the row pinouts of the keypad esp32
+//byte colPins[COLS] = {5, 4, 3, 2}; //connect to the column pinouts of the keypad teensy
+byte colPins[COLS] = {26, 25, 33, 32};//connect to the column pinouts of the keypad esp32
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); //initialize an instance of class NewKeypad
 
-const int CLK = 14; // Definition der Pins. CLK an D6, DT an D5.
+//const int CLK = 14; // Definition der Pins. CLK an D6, DT an D5 für Teensy
+const int CLK = 4 // Definition der Pins. CLK an D6, DT an D5 für ESP32
 const int DT = 15;
-const int SW = 16; // Der Switch wird mit Pin D2 Verbunden. ACHTUNG : Verwenden Sie einen interrupt-Pin!
+//const int SW = 16; // Der Switch wird mit Pin D2 Verbunden. ACHTUNG : Verwenden Sie einen interrupt-Pin! Teensy
+const int SW = 2; // Der Switch wird mit Pin D2 Verbunden. ACHTUNG : Verwenden Sie einen interrupt-Pin! ESP32
 long encValue = 10; // Definition der "alten" Position (Diese fiktive alte Position wird benötigt, damit die aktuelle Position später im seriellen Monitor nur dann angezeigt wird, wenn wir den Rotary Head bewegen)
 Encoder myEnc(DT, CLK); // An dieser Stelle wird ein neues Encoder Projekt erstellt. Dabei wird die Verbindung über die zuvor definierten Varibalen (DT und CLK) hergestellt.
 
