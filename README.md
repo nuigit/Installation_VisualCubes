@@ -11,7 +11,7 @@ This is the Version 1. In Version 2 the keypad-box will be updated. Stay tuned!
 <h2>Hardware</h2>
 For this example you need: <br>
 
--Teensy 3.1 (or a different board)<br>
+-Teensy 3.1 or ESP32 (or a different board)<br>
 -Adafruit keypad(or a custom/selfmade keypad)<br>
 -Encoder ky-040<br>
 -GY521<br>
